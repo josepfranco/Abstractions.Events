@@ -1,5 +1,3 @@
-using Abstractions.Events.Models;
-
 namespace Abstractions.Events
 {
     public interface IEventFactory
@@ -9,8 +7,8 @@ namespace Abstractions.Events
         /// </summary>
         /// <param name="aggregateName">the aggregate name (usually the topic)</param>
         /// <param name="payload">an optional payload</param>
-        /// <typeparam name="TEvent"></typeparam>
+        /// <typeparam name="TEventPayload"></typeparam>
         /// <returns></returns>
-        Event Create<TEvent>(string aggregateName, TEvent? payload = null) where TEvent : class;
+        Event Create<TEventPayload>(string aggregateName, TEventPayload? payload = null) where TEventPayload : class;
     }
 }

@@ -14,4 +14,8 @@
         <!--                -->
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Confluent.SchemaRegistry.Serdes.Avro" Version="1.7.0" />
+    </ItemGroup>
+
 </Project>

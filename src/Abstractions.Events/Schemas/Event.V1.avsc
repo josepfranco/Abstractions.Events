@@ -1,0 +1,45 @@
+﻿{
+  "namespace": "Abstractions.Events",
+  "type": "record",
+  "name": "Event",
+  "fields": [
+    { 
+      "name": "Name",
+      "type": "string",
+      "doc": "The name that uniquely identifies this event"
+    },
+    {
+      "name": "AggregateName",
+      "type": "string",
+      "doc": "The group/aggregate this event belongs to"
+    },
+    {
+      "name": "CreatedAt",
+      "type": "long",
+      "doc": "The UTC timestamp (in milliseconds) when this event was created"
+    },
+    {
+      "name": "Payload",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "EventPayload",
+          "fields": [
+            {
+              "name": "DataSchema",
+              "type": "string",
+              "doc": "The schema of the value in the 'Data' field"
+            },
+            {
+              "name": "Data",
+              "type": "bytes",
+              "doc": "The data of this payload"
+            }
+          ]
+        },
+      ],
+      "doc": "The optional payload data of this event"
+    }
+  ]
+}
