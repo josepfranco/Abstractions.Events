@@ -7,13 +7,13 @@
       "name": "Name",
       "type": "string",
       "doc": "The name that uniquely identifies this event",
-      "default": null
+      "default": "NULL"
     },
     {
       "name": "AggregateName",
       "type": "string",
       "doc": "The group/aggregate this event belongs to",
-      "default": null
+      "default": "NULL"
     },
     {
       "name": "CreatedAt",
@@ -33,13 +33,13 @@
               "name": "DataSchema",
               "type": "string",
               "doc": "The schema of the value in the 'Data' field",
-              "default": null
+              "default": "NULL"
             },
             {
               "name": "Data",
               "type": "bytes",
               "doc": "The data of this payload",
-              "default": null
+              "default": "\u0000"
             }
           ]
         },
