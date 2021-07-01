@@ -6,17 +6,20 @@
     { 
       "name": "Name",
       "type": "string",
-      "doc": "The name that uniquely identifies this event"
+      "doc": "The name that uniquely identifies this event",
+      "default": null
     },
     {
       "name": "AggregateName",
       "type": "string",
-      "doc": "The group/aggregate this event belongs to"
+      "doc": "The group/aggregate this event belongs to",
+      "default": null
     },
     {
       "name": "CreatedAt",
       "type": "long",
-      "doc": "The UTC timestamp (in milliseconds) when this event was created"
+      "doc": "The UTC timestamp (in milliseconds) when this event was created",
+      "default": 0
     },
     {
       "name": "Payload",
@@ -29,12 +32,14 @@
             {
               "name": "DataSchema",
               "type": "string",
-              "doc": "The schema of the value in the 'Data' field"
+              "doc": "The schema of the value in the 'Data' field",
+              "default": null
             },
             {
               "name": "Data",
               "type": "bytes",
-              "doc": "The data of this payload"
+              "doc": "The data of this payload",
+              "default": null
             }
           ]
         },
