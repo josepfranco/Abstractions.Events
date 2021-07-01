@@ -15,7 +15,7 @@ namespace Abstractions.Events
 	
 	public partial class EventPayload : ISpecificRecord
 	{
-		public static Schema _SCHEMA = Avro.Schema.Parse(@"{""type"":""record"",""name"":""EventPayload"",""namespace"":""Abstractions.Events"",""fields"":[{""name"":""DataSchema"",""doc"":""The schema of the value in the 'Data' field"",""default"":null,""type"":""string""},{""name"":""Data"",""doc"":""The data of this payload"",""default"":null,""type"":""bytes""}]}");
+		public static Schema _SCHEMA = Avro.Schema.Parse(@"{""type"":""record"",""name"":""EventPayload"",""namespace"":""Abstractions.Events"",""fields"":[{""name"":""DataSchema"",""doc"":""The schema of the value in the 'Data' field"",""default"":""NULL"",""type"":""string""},{""name"":""Data"",""doc"":""The data of this payload"",""default"":""\u0000"",""type"":""bytes""}]}");
 		/// <summary>
 		/// The schema of the value in the 'Data' field
 		/// </summary>
